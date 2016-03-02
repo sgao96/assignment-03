@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+using std::cout;
+using std::cin;
 
 int main() {
 
@@ -16,7 +18,7 @@ int main() {
   
   cin >> userChar;
   
-  if (userChar != "Y" && userChar != "N")
+  if (userChar != 'Y' && userChar != 'N')
       throw UnexpectedUserInput;
   }
   catch (int i)
