@@ -6,20 +6,28 @@
 using std::cout;
 using std::cin;
 
-int main() {
-
-  const int UnexpectedUserInput = 5;
+void getUserInput(char &userChar){
   
-  char userChar;
-  
-  try
-  {
   cout << "Would you like to play my game? (Y/N) " << std::endl;
   
   cin >> userChar;
   
   if (userChar != 'Y' && userChar != 'N')
       throw UnexpectedUserInput;
+      
+  
+}
+
+int main() {
+
+  const int UnexpectedUserInput = 5;
+  
+  char userChar;
+  
+  
+  try
+  {
+      getUserInput(userChar);
   }
   catch (int i)
   {
