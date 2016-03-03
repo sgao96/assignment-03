@@ -1,5 +1,10 @@
+/* ----------------------------------------------------------------------------
+* Copyright &copy; 2016 Alan Reeve <areeve@csu.fullerton.edu>,
+                        Shang Gao <sgao96@csu.fullerton.edu>
+* Released under the [MIT License] (http://opensource.org/licenses/MIT)
+* ------------------------------------------------------------------------- */
 
-// example of an exception in c++
+// example program of exception handling in c++
 
 #include <iostream>
 #include <string>
@@ -14,15 +19,13 @@ void getUserInput(char &userChar){
   
   if (userChar != 'Y' && userChar != 'N')
       throw 5;
-      
-  
+ 
 }
 
 int main() {
   
   char userChar;
-  
-  
+
   try
   {
       getUserInput(userChar);
@@ -31,5 +34,6 @@ int main() {
   {
       cout << "An exception occurred. Exception Nr. " << i << std::endl;
   }
+  
   return 0;
 }
