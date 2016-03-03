@@ -13,14 +13,12 @@ void getUserInput(char &userChar){
   cin >> userChar;
   
   if (userChar != 'Y' && userChar != 'N')
-      throw UnexpectedUserInput;
+      throw 5;
       
   
 }
 
 int main() {
-
-  const int UnexpectedUserInput = 5;
   
   char userChar;
   
